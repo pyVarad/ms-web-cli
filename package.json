@@ -1,0 +1,32 @@
+{
+  "name": "ms-web-cli",
+  "version": "1.0.5",
+  "description": "",
+  "main": "./dist/index.js",
+  "bin": {
+    "ms-web-cli": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "format": "npx prettier --config .prettierrc \"src/**/*.ts\" --write",
+    "prebuild": "yarn format",
+    "build": "tsup",
+    "prestart": "yarn build",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.1",
+    "tsup": "^8.0.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "questionnaire-utils": "^1.0.1"
+  }
+}
